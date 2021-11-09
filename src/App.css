@@ -1,38 +1,48 @@
 .App {
-  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .new-btn {
+  background: hsl(340deg 100% 32%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  outline-offset: 4px;
+  cursor: pointer;
+  font-size: 1em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App .btn-front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: hsl(345deg 100% 47%);
   color: white;
+  transform: translateY(-6px);
 }
 
-.App-link {
-  color: #61dafb;
+.App .new-btn:active .btn-front {
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .card-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.App .turns {
+  color: red;
+}
+.App .credit {
+  font-family: Verdana, sans-serif;
+  margin-top: 40px;
+  text-decoration: none;
+  color: silver;
+  font-size: 0.4em;
+}
+.App .credit a {
+  text-decoration: none;
+  color: #93c7d7;
 }

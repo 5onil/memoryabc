@@ -11,7 +11,6 @@ export default function SingleCard({
 }) {
   const handleClick = () => {
     if (!disabled) {
-      startFlipEfx();
       handleChoice(card);
     }
   };

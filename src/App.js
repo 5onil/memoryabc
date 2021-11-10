@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import SingleCard from './components/SingleCard';
-import flipSfx from './sound/Card-flip-sound-effect.mp3';
 import './App.css';
 
 const cardImages = [
@@ -26,7 +25,7 @@ function App() {
   };
 
   // flip card sound effect
-  let flipAudio = new Audio({ flipSfx });
+  let flipAudio = new Audio('./sound/Card-flip-sound-effect.mp3');
   const startFlipEfx = () => {
     flipAudio.play();
   };
@@ -45,6 +44,7 @@ function App() {
 
   // handle a choice
   const handleChoice = (card) => {
+    startFlipEfx();
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
 

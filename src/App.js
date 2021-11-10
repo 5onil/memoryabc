@@ -42,7 +42,6 @@ function App() {
 
   // handle a choice
   const handleChoice = (card) => {
-    flipAudio.play();
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
 
@@ -103,6 +102,7 @@ function App() {
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
             disabled={disabled}
+            flipAudio={flipAudio}
           />
         ))}
       </div>

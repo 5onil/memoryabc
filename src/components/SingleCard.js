@@ -7,7 +7,6 @@ export default function SingleCard({
   flipped,
   disabled,
   num,
-  startFlipEfx,
 }) {
   const handleClick = () => {
     if (!disabled) {

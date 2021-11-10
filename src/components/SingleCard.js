@@ -7,11 +7,11 @@ export default function SingleCard({
   flipped,
   disabled,
   num,
-  flipAudio,
+  cardAudio,
 }) {
   const handleClick = () => {
     if (!disabled) {
-      flipAudio.play();
+      cardAudio.play();
       handleChoice(card);
     }
   };

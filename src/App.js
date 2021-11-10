@@ -22,7 +22,7 @@ function App() {
     new Audio('./sound/mixkit-cartoon-positive-sound-2255.mp3')
   );
   // flip card sound effect
-  const [flipAudio] = useState(new Audio('./sound/button-16.mp3'));
+  const [cardAudio] = useState(new Audio('./sound/cardflip.mp3'));
   // // Matched cards sound effect
   const [successAudio] = useState(
     new Audio('./sound/Game-show-winner-bell-sound-effect.mp3')
@@ -102,7 +102,7 @@ function App() {
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
             disabled={disabled}
-            flipAudio={flipAudio}
+            cardAudio={cardAudio}
           />
         ))}
       </div>

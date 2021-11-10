@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import SingleCard from './components/SingleCard';
-
+import flipSfx from './sound/Card-flip-sound-effect.mp3';
 import './App.css';
 
 const cardImages = [
@@ -23,6 +23,12 @@ function App() {
   let introAudio = new Audio('./sound/mixkit-cartoon-positive-sound-2255.wav');
   const startIntroEfx = () => {
     introAudio.play();
+  };
+
+  // flip card sound effect
+  let flipAudio = new Audio({ flipSfx });
+  const startFlipEfx = () => {
+    flipAudio.play();
   };
 
   // shuffle cards
@@ -107,6 +113,7 @@ function App() {
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
             disabled={disabled}
+            startFlipEfx={startFlipEfx}
           />
         ))}
       </div>

@@ -1,5 +1,6 @@
 import './SingleCard.css';
 import coverCard from '../img/cover2.png';
+import flipSfx from '../sound/Card-flip-sound-effect.mp3';
 
 export default function SingleCard({
   card,
@@ -9,7 +10,7 @@ export default function SingleCard({
   num,
 }) {
   // flip card sound effect
-  let flipAudio = new Audio('../sound/Card-flip-sound-effect.mp3');
+  let flipAudio = new Audio({ flipSfx });
   const startFlipEfx = () => {
     flipAudio.play();
   };

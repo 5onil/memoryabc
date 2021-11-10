@@ -1,8 +1,7 @@
 .App {
-  max-width: 760px;
+  max-width: 860px;
   margin: 0 auto 40px auto;
 }
-
 .App .new-btn {
   background: hsl(340deg 100% 32%);
   border-radius: 12px;
@@ -31,6 +30,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+}
+@media (max-width: 768px) {
+  .App .card-grid {
+    padding: 0 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+}
+
+.App .turns-box {
+  margin-top: 30px;
 }
 .App .turns {
   color: red;

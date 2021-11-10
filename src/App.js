@@ -110,7 +110,7 @@ function App() {
           />
         ))}
       </div>
-      <p>
+      <p className='turns-box'>
         <span>😅🕖👴</span> försök: <span className='turns'>{turns}</span>
       </p>
       <div className='credit'>

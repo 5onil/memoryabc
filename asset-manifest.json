@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/memoryabc/static/css/main.ce93d6f1.chunk.css",
-    "main.js": "/memoryabc/static/js/main.7e11183a.chunk.js",
-    "main.js.map": "/memoryabc/static/js/main.7e11183a.chunk.js.map",
+    "main.css": "/memoryabc/static/css/main.ac461a65.chunk.css",
+    "main.js": "/memoryabc/static/js/main.99c55f83.chunk.js",
+    "main.js.map": "/memoryabc/static/js/main.99c55f83.chunk.js.map",
     "runtime-main.js": "/memoryabc/static/js/runtime-main.7e4b6ded.js",
     "runtime-main.js.map": "/memoryabc/static/js/runtime-main.7e4b6ded.js.map",
     "static/js/2.ba6cf90d.chunk.js": "/memoryabc/static/js/2.ba6cf90d.chunk.js",
     "static/js/2.ba6cf90d.chunk.js.map": "/memoryabc/static/js/2.ba6cf90d.chunk.js.map",
     "index.html": "/memoryabc/index.html",
-    "static/css/main.ce93d6f1.chunk.css.map": "/memoryabc/static/css/main.ce93d6f1.chunk.css.map",
+    "static/css/main.ac461a65.chunk.css.map": "/memoryabc/static/css/main.ac461a65.chunk.css.map",
     "static/js/2.ba6cf90d.chunk.js.LICENSE.txt": "/memoryabc/static/js/2.ba6cf90d.chunk.js.LICENSE.txt",
+    "static/media/Card-flip-sound-effect.affcda3a.mp3": "/memoryabc/static/media/Card-flip-sound-effect.affcda3a.mp3",
     "static/media/index.css": "/memoryabc/static/media/bgr.27ecd0e8.png",
     "static/media/cover2.92a6c618.png": "/memoryabc/static/media/cover2.92a6c618.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7e4b6ded.js",
     "static/js/2.ba6cf90d.chunk.js",
-    "static/css/main.ce93d6f1.chunk.css",
-    "static/js/main.7e11183a.chunk.js"
+    "static/css/main.ac461a65.chunk.css",
+    "static/js/main.99c55f83.chunk.js"
   ]
 }

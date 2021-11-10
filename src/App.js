@@ -19,7 +19,7 @@ function App() {
   const [disabled, setDisabled] = useState(false);
 
   // Intro sound effect
-  let introAudio = new Audio('./sound/mixkit-cartoon-positive-sound-2255.wav');
+  let introAudio = new Audio('./sound/mixkit-cartoon-positive-sound-2255.mp3');
   const startIntroEfx = () => {
     introAudio.play();
   };

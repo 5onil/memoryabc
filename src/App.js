@@ -17,18 +17,16 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
-
   // Intro sound effect
-  let introAudio = new Audio('./sound/mixkit-cartoon-positive-sound-2255.mp3');
-  const startIntroEfx = () => {
-    introAudio.play();
-  };
-
+  const [introAudio] = useState(
+    new Audio('./sound/mixkit-cartoon-positive-sound-2255.mp3')
+  );
   // flip card sound effect
-  let flipAudio = new Audio('./sound/button-16.mp3');
-  const startFlipEfx = () => {
-    flipAudio.play();
-  };
+  const [flipAudio] = useState(new Audio('./sound/button-16.mp3'));
+  // // Matched cards sound effect
+  const [successAudio] = useState(
+    new Audio('./sound/Game-show-winner-bell-sound-effect.mp3')
+  );
 
   // shuffle cards
   const shuffleCards = () => {
@@ -44,27 +42,19 @@ function App() {
 
   // handle a choice
   const handleChoice = (card) => {
-    startFlipEfx();
+    flipAudio.play();
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
 
   // compare two selected cards
   useEffect(() => {
-    // // Matched cards sound effect
-    let successAudio = new Audio(
-      './sound/Game-show-winner-bell-sound-effect.mp3'
-    );
-    const startSuccessEfx = () => {
-      successAudio.play();
-    };
-
     if (choiceOne && choiceTwo) {
       setDisabled(true);
       if (choiceOne.src === choiceTwo.src) {
         setCards((prevCards) => {
           return prevCards.map((card) => {
             if (card.src === choiceOne.src) {
-              startSuccessEfx();
+              successAudio.play();
               return { ...card, matched: true };
             } else {
               return card;
@@ -76,7 +66,7 @@ function App() {
         setTimeout(() => resetTurn(), 1000);
       }
     }
-  }, [choiceOne, choiceTwo]);
+  }, [choiceOne, choiceTwo, successAudio]);
 
   // reset choice & increase turn
   const resetTurn = () => {
@@ -93,7 +83,7 @@ function App() {
 
   // button start new game
   const newGame = () => {
-    startIntroEfx();
+    introAudio.play();
     shuffleCards();
   };
 
@@ -113,7 +103,6 @@ function App() {
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
             disabled={disabled}
-            startFlipEfx={startFlipEfx}
           />
         ))}
       </div>

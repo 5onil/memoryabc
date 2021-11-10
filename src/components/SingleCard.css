@@ -43,8 +43,8 @@
 .card-7,
 .card-8,
 .card-10 {
-  animation: slide-in-elliptic-left-fwd 1.5s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: swing-in-top-fwd 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s
+    both;
 }
 .card-1,
 .card-3,
@@ -52,31 +52,32 @@
 .card-6,
 .card-9,
 .card-11 {
-  animation: slide-in-elliptic-right-fwd 1.4s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+  animation: swing-in-bottom-fwd 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    0.4s both;
 }
-@keyframes slide-in-elliptic-left-fwd {
+
+@keyframes swing-in-top-fwd {
   0% {
-    transform: translateX(-800px) rotateY(30deg) scale(0);
-    transform-origin: -100% 50%;
+    transform: rotateX(-100deg);
+    transform-origin: top;
     opacity: 0;
   }
   100% {
-    transform: translateX(0) rotateY(0) scale(1);
-    transform-origin: 1800px 50%;
+    transform: rotateX(0deg);
+    transform-origin: top;
     opacity: 1;
   }
 }
 
-@keyframes slide-in-elliptic-right-fwd {
+@keyframes swing-in-bottom-fwd {
   0% {
-    transform: translateX(800px) rotateY(-30deg) scale(0);
-    transform-origin: -100% 50%;
+    transform: rotateX(100deg);
+    transform-origin: bottom;
     opacity: 0;
   }
   100% {
-    transform: translateX(0) rotateY(0) scale(1);
-    transform-origin: -1800px 50%;
+    transform: rotateX(0);
+    transform-origin: bottom;
     opacity: 1;
   }
 }

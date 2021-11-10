@@ -8,9 +8,12 @@ export default function SingleCard({
   disabled,
   num,
   cardAudio,
+  successAudio,
 }) {
   const handleClick = () => {
     if (!disabled) {
+      successAudio.pause();
+      successAudio.currentTime = 0;
       cardAudio.play();
       handleChoice(card);
     }

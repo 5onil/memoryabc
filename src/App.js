@@ -103,6 +103,7 @@ function App() {
             flipped={card === choiceOne || card === choiceTwo || card.matched}
             disabled={disabled}
             cardAudio={cardAudio}
+            successAudio={successAudio}
           />
         ))}
       </div>

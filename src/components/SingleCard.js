@@ -1,4 +1,5 @@
 import './SingleCard.css';
+import coverCard from '../img/cover2.png';
 
 export default function SingleCard({
   card,
@@ -26,7 +27,7 @@ export default function SingleCard({
         <img className='front' src={card.src} alt='card front' />
         <img
           className='back'
-          src='../img/cover2.png'
+          src={coverCard}
           onClick={handleClick}
           alt='card back'
         />

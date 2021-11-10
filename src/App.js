@@ -1,19 +1,12 @@
 import { useState, useEffect } from 'react';
 import SingleCard from './components/SingleCard';
-import aCard from './img/a.png';
-import bCard from './img/b.png';
-import cCard from './img/c.png';
-import dCard from './img/d.png';
-import eCard from './img/e.png';
-import fCard from './img/f.png';
 
 import './App.css';
-// import './img/';
 
 const cardImages = [
-  { 'src': '../img/a.png', matched: false },
-  { 'src': '../img/b.png', matched: false },
-  { 'src': '../img/c.png', matched: false },
+  { 'src': './img/a.png', matched: false },
+  { 'src': './img/b.png', matched: false },
+  { 'src': './img/c.png', matched: false },
   { 'src': './img/d.png', matched: false },
   { 'src': './img/e.png', matched: false },
   { 'src': './img/f.png', matched: false },

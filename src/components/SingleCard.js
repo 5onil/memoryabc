@@ -9,7 +9,7 @@ export default function SingleCard({
   num,
 }) {
   // flip card sound effect
-  let flipAudio = new Audio('/sound/Card-flip-sound-effect.mp3');
+  let flipAudio = new Audio('../sound/Card-flip-sound-effect.mp3');
   const startFlipEfx = () => {
     flipAudio.play();
   };

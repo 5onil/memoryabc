@@ -20,7 +20,7 @@ function App() {
   const [disabled, setDisabled] = useState(false);
 
   // Intro sound effect
-  let introAudio = new Audio('/sound/mixkit-cartoon-positive-sound-2255.wav');
+  let introAudio = new Audio('./sound/mixkit-cartoon-positive-sound-2255.wav');
   const startIntroEfx = () => {
     introAudio.play();
   };
@@ -46,7 +46,7 @@ function App() {
   useEffect(() => {
     // // Matched cards sound effect
     let successAudio = new Audio(
-      '/sound/Game-show-winner-bell-sound-effect.mp3'
+      './sound/Game-show-winner-bell-sound-effect.mp3'
     );
     const startSuccessEfx = () => {
       successAudio.play();
